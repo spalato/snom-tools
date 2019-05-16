@@ -1,4 +1,3 @@
-# snom_tools
+# snom tools
 
-various utilities for the processing and analysis of AFM and SNOM data, by Samuel Palato
-
+Various utilities for the processing and analysis of AFM and SNOM data, by Samuel Palato
