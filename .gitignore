@@ -1,0 +1,4 @@
+*.pyc
+scratch/.ipynb_checkpoints/
+src/snom.egg-info/
+.vscode/
