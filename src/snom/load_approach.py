@@ -25,14 +25,19 @@ def export_plot(outfn, z, payload):
     plt.xlim(np.min(z), np.max(z))
     logging.info(f"Saving to: {outfn}")
     plt.xlabel("Z (nm)")
-    plt.legend(
-        loc="upper left",
-        handletextpad=1,
+    fig.legend(
+        loc="lower left",
+        handletextpad=0.5,
         handlelength=1,
-        bbox_to_anchor=(1.0, 1.0),
+        ncol=4,
+        fontsize="small",
+        mode="expand",
+        #bbox_to_anchor=(0, 1.02, 1.0, 0.102),
+        bbox_to_anchor=(0.01, 0.85, 0.98, 0.14),
+        bbox_transform=fig.transFigure,
     )
-    plt.tight_layout()
-    plt.savefig(outfn)
+    plt.subplots_adjust(left=0.08, right=0.96, top=0.84, bottom=0.11)
+    plt.savefig(outfn, dpi=300)
 
 plot_exts = sorted([".png", ".svg", ".pdf"])
 default_channels = ["M1A", "M1P", "O4A"]
